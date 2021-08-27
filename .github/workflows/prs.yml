@@ -10,7 +10,12 @@ jobs:
     steps:
       - name: Get branch name
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d '/' -f 3)" >> $GITHUB_ENV
+      - name: Printing
+        run: echo env.BRANCH
       - name: Do work
         if: env.BRANCH == '@test'
         run: echo "WORKS"
+      - name: Do work2
+        if: evn.BRANCH == @test
+        run: echo "WORKS2"
       
