@@ -1,12 +1,11 @@
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
-      - '@test/**'
+      - @test/trigger
 
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     steps:
-      - run: echo "🎉 The job was automatically triggered by
+      - name: Set env var
+        run: echo $(echo $GITHUB_REF | cut -d'/' -f 3)
