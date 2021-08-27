@@ -1,8 +1,11 @@
-on: push
+on:
+  push:
+    branches:
+      - not-trigger-branch
 
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - name: Set output
-        run: echo hola
+        run: echo $(echo $GITHUB_REF | cut -d '/' -f 3)
