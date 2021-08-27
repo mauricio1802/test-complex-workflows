@@ -1,7 +1,4 @@
-on:
-  push:
-    branches:
-      - not-trigger-branch
+on: push
 
 jobs:
   Explore-GitHub-Actions:
