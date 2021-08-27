@@ -16,6 +16,6 @@ jobs:
         if: env.BRANCH == '@test'
         run: echo "WORKS"
       - name: Do work2
-        if: evn.BRANCH == @test
+        if: env.BRANCH == @test
         run: echo "WORKS2"
       
