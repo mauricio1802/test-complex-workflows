@@ -1,0 +1,11 @@
+on:
+  pull_request:
+    types: [closed]
+  branches:
+    - @test/**
+
+jobs:
+  Explore-GitHub-Actions:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "🎉 The job was automatically triggered by
