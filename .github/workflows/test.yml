@@ -1,11 +1,12 @@
 on:
   pull_request:
     types: [closed]
-  branches:
-    - @test/**
+    branches:
+     - test/**
 
 jobs:
   Explore-GitHub-Actions:
       runs-on: ubuntu-latest
+      if: github.event.pull_request.merged == true
       steps:
         - run: echo "🎉 The job was automatically triggered by
