@@ -9,11 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get branch name
-        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d '/' -f 3)" >> $GITHUB_ENV
-      - name: Printing
-        run: echo $BRANCH
-      - name: Printing2
-        run: echo $GITHUB_HEAD_REF
+        run: echo "BRANCH=$(echo $GITHUB_HEAD_REF | cut -d '/' -f 1)" >> $GITHUB_ENV
       - name: Do work
         if: env.BRANCH == '@test'
         run: echo "WORKS"
