@@ -6,7 +6,6 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     steps:
       - name: Set output
           run: echo $(echo $GITHUB_REF | cut -d '/' -f 3)
