@@ -8,5 +8,5 @@ jobs:
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
       
       - name: Getting value fron evn
-        if: $BRANCH == '@test'
+        if: env.BRANCH == '@test'
         run: echo works
