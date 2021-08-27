@@ -5,4 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set env var
-        run: echo $(echo $GITHUB_REF | cut -d'/' -f 3)
+        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+      
+      - name: Getting value fron evn
+        run: echo $BRANCH
