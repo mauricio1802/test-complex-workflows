@@ -11,7 +11,7 @@ jobs:
       - name: Get branch name
         run: echo "BRANCH=$(echo $GITHUB_HEAD_REF | cut -d '/' -f 1)" >> $GITHUB_ENV
       - name: Do work
-        if: env.BRANCH == '@test' && github.event.pull_request.merged == true
+        if: env.BRANCH == '@test2' && github.event.pull_request.merged == true
         run: echo "WORKS"
       - name: Create folder for private key
         run: mkdir -p ~/.test
