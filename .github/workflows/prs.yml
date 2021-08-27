@@ -6,7 +6,7 @@ on:
 
 jobs:
   On-Merged-PRs-from-test-branches:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get branch name
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d '/' -f 3)" >> $GITHUB_ENV
