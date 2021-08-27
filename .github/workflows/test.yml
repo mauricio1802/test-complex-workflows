@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set output
-          run: echo hola
+        run: echo hola
