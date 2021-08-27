@@ -1,0 +1,16 @@
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  On-Merged-PRs-from-test-branches:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Get branch name
+        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d '/' -f 3)" >> $GITHUB_ENV
+      - name: Do work:
+        if: env.BRANCH == '@test' && github.event.pull_request.merged == true
+        run: echo "WORKS"
+      
