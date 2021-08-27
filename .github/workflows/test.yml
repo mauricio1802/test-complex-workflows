@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set output
-          run: echo $(echo $GITHUB_REF | cut -d '/' -f 3)
+          run: echo hola
