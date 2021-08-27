@@ -9,7 +9,6 @@ jobs:
     if: github.event.pull_request.merged == true
     steps:
       - name: Set output
-          id: vars
           run: echo $(echo $GITHUB_REF | cut -d '/' -f 3)
       # - name: Set output
       #     id: vars
