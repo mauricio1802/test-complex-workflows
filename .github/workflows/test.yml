@@ -10,9 +10,3 @@ jobs:
     steps:
       - name: Set output
           run: echo $(echo $GITHUB_REF | cut -d '/' -f 3)
-      # - name: Set output
-      #     id: vars
-      #     run: echo ::set-output name=short_ref::${}
-      # - name: test
-      #     if: ${{ steps.vars.outputs.short_ref }} == test
-      #     run: echo "🎉 The job was automatically triggered by
