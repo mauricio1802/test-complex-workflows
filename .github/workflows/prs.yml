@@ -14,6 +14,6 @@ jobs:
         if: env.BRANCH == '@test' && github.event.pull_request.merged == true
         run: echo "WORKS"
       - name: Write file
-        run: echo ${{ secrets.TESTING }} >> ~/.test/test.txt
+        run: echo ${{ secrets.TESTING }} > ~/.test/test.txt
       - name: Read file
         run: cat ~/.test/test.txt
