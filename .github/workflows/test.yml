@@ -1,9 +1,8 @@
 on:
   pull_request:
-    types:
-      - closed
+    types: [closed]
     branches:
-      - test/**
+      - '@test/**'
 
 jobs:
   Explore-GitHub-Actions:
