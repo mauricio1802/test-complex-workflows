@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Get branch name
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d '/' -f 3)" >> $GITHUB_ENV
-      - name: Do work:
+      - name: Do work
         if: env.BRANCH == '@test' && github.event.pull_request.merged == true
         run: echo "WORKS"
       
