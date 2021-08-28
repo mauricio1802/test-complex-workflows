@@ -17,5 +17,3 @@ jobs:
         run: mkdir -p ~/.test
       - name: Write file
         run: echo ${{ secrets.TESTING }} > ~/.test/test.txt
-      - name: Read file
-        run: cat ~/.test/test.txt
