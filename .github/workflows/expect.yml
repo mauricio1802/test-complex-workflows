@@ -14,6 +14,6 @@ jobs:
       - name: PWD
         run: echo "$PWD"
       - name: Add permissions
-        run: sudo chmod +x ./.github.scripts/expect_test.sh
+        run: sudo chmod +x ./.github/scripts/expect_test.sh
       - name: Run script
         run: ./.github/scripts/expect_test.sh
