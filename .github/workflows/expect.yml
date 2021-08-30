@@ -10,9 +10,9 @@ jobs:
         with:
           python-version: '3.x'
       - name: Checking files
-        run: echo "$(ls)"
-      - name: PWD
-        run: echo "$PWD"
+        run: echo "DIRS=$(ls)"
+      - name: ls
+        run: echo "$DIRS"
       - name: Add permissions
         run: sudo chmod +x ./.github/scripts/expect_test.sh
       - name: Run script
