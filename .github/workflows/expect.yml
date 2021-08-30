@@ -1,0 +1,13 @@
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install expect
+        run: apt install expect -y
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Run script
+        run: ./.github.scripts.expect_test.sh
