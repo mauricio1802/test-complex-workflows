@@ -11,4 +11,5 @@ jobs:
         with:
           python-version: '3.x'
       - name: Run script
-        run: ./.github/scripts/expect_test.sh
+        working-directory: ./.github/scripts
+        run: ./expect_test.sh
