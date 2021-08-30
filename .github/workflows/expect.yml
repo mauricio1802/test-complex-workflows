@@ -13,5 +13,5 @@ jobs:
       - name: SET ENV
         run: echo "DIR=scripts" >> $GITHUB_ENV
       - name: Run script
-        working-directory: ./.github/$DIR
+        working-directory: ./.github/env.DIR
         run: ./expect_test.sh
