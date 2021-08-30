@@ -10,11 +10,5 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      - name: Checking files
-        run: echo "DIRS=$(ls)"
-      - name: ls
-        run: echo "$DIRS"
-      - name: Add permissions
-        run: sudo chmod +x ./.github/scripts/expect_test.sh
       - name: Run script
         run: ./.github/scripts/expect_test.sh
