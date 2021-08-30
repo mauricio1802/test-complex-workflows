@@ -10,6 +10,6 @@ jobs:
         with:
           python-version: '3.x'
       - name: Checking files
-        run: ls
+        run: echo $(ls)
       - name: Run script
         run: ./.github/scripts/expect_test.sh
